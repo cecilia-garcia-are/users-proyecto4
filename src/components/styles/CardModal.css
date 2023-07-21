@@ -1,0 +1,75 @@
+.cardmodal-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(239, 225, 209, 0.678);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: transform 200ms ease;
+  }
+  
+  .close-card{
+      transform: scale(0);
+  }
+  
+  .cardmodal__group {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--bg-card);
+    padding: 1.5em;
+    border-radius: 0.7em;
+    position: relative;
+    margin: 1em;
+    box-shadow: -15px -5px 20px -10px  rgba(39, 5, 39, 0.685);
+  }
+
+  .cardmodal__tittle {
+    text-align: center;
+    padding-bottom: 1em;
+    color: var(--color-purple);
+  }
+  
+  .cardmodal__text {
+    text-align: center;
+    padding-bottom: 1em;
+    color: var(--color-purple);
+
+  }
+  
+  .cardmodal__close {
+    position: absolute;
+    font-size: 1.2rem;
+    top: 1em;
+    right: 1.5em;
+    cursor: pointer;
+  }
+  
+  .cardmodal__close:hover {
+      color: var(--bg-body);
+      filter: brightness(1.2);
+    }
+  
+  .cardmodal__btn {
+    width: 100%;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    background: var(--header-color);
+    color: var(--bg-body);
+    outline: none;
+    border-radius: 10px 30px;
+    margin-bottom: 0.5em;
+    
+  }
+  
+  .cardmodal__btn:hover {
+    filter: brightness(1.2);
+    box-shadow: -15px -5px 20px -10px  rgba(39, 5, 39, 0.685);
+  }
+  
