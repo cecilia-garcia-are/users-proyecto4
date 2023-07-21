@@ -59,10 +59,11 @@ const useFetch = (baseUrl, setCloseForm) => {
     const updateApi = (path, id, data) => {
         const url = `${baseUrl}${path}/${id}/`
         setIsLoading(true)
-        axios.patch(url, data)
+        axios
+        .patch(url, data)
         .then(resp => {
             console.log(resp.data)
-            const infoApiMapped = infoApi.map(e => e.id === id ? resp : e)
+            const infoApiMapped = infoApi.map(e => e.id === id ? resp.data : e)
             setInfoApi(infoApiMapped)
             setCloseForm(true)
         })
