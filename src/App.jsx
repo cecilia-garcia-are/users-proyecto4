@@ -19,6 +19,10 @@ function App() {
 
   const [updateModal, setUpdateModal] = useState(true)
 
+  const [updateUserName, setUpdateUserName] = useState()
+
+  const [addUserName, setAddUserName] = useState()
+
   const [deleteUserName, setDeleteUserName] = useState()
 
 
@@ -41,8 +45,17 @@ function App() {
   
   const showDeleteMessage = (userName) => {
     setDeleteUserName(userName)
-    
+  
   }
+
+  const showUpdateMessage = (userName) => {
+    setUpdateUserName(userName)
+  }
+
+ const showAddMessage = (userName) => {
+  setAddUserName(userName)
+ }
+
 
   const handleOpenForm = () => {
     setCloseForm(false)
@@ -80,6 +93,8 @@ function App() {
       setCloseForm={setCloseForm}
       setAddModal={setAddModal}
       setUpdateModal={setUpdateModal}
+      showUpdateMessage={showUpdateMessage}
+      showAddMessage={showAddMessage}
   
       />
       <div className='usercard-container'>
@@ -107,10 +122,12 @@ function App() {
       <AddModal
       addModal= {addModal}
       setAddModal={setAddModal}
+      addUserName={addUserName}
       />
       <UpdateModal
       updateModal={updateModal}
       setUpdateModal={setUpdateModal}
+      updateUserName={updateUserName}
       />
 
    </>

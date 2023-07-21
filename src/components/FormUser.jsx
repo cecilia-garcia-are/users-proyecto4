@@ -10,7 +10,9 @@ const FormUser= ({
   closeForm,
   setCloseForm,
   setAddModal,
-  setUpdateModal
+  setUpdateModal,
+  showUpdateMessage,
+  showAddMessage
 }) => {
 
 
@@ -27,11 +29,14 @@ const FormUser= ({
       //update
       updateUserById("/users", updateInfo.id, data);
       setUpdateInfo();
-      setUpdateModal()
+      setUpdateModal();
+      showUpdateMessage(`${data.first_name} ${data.last_name}`)
+
     } else {
       //create
       createNewUser("/users", data);
       setAddModal(false)
+      showAddMessage(`${data.first_name} ${data.last_name}`);
     }
     
       reset({
@@ -41,8 +46,10 @@ const FormUser= ({
         password: '',
         birthday: ''
       })
-    }
+    
 
+
+   }
     const handleCloseForm = () =>{
       setCloseForm(true)
     }
