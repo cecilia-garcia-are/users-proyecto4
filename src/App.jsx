@@ -92,6 +92,7 @@ function App() {
               setUpdateInfo={setUpdateInfo}
               handleOpenForm={handleOpenForm}
               setCloseModal={setCloseModal}
+              showDeleteMessage={showDeleteMessage}
 
             />
           ))
