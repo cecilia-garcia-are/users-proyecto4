@@ -4,14 +4,14 @@ import './styles/IsDarkMode.css'
 
 const IsDarkMode = () => {
   const [darkMode, setDarkMode] = useState(() => {
-    // Obtener el estado inicial del modo oscuro desde el localStorage
+    // Estado inicial DarkMode del localStorage
     const initialMode = localStorage.getItem("darkMode");
-    // Si existe en el localStorage, retornar ese valor
-    // Si no, retornar false (modo claro) como valor inicial
+    // Si existe, retornar DarkMode
+    // Si no existe, retornar LigthMode como valor inicial
     return initialMode ? JSON.parse(initialMode) : false;
   });
 
-  // Almacenar el estado actual en localStorage cada vez que cambie
+  // Se encuentra el estado actual en localStorage cada que cambie
   useEffect(() => {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
   }, [darkMode]);
