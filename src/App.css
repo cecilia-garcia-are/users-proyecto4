@@ -26,9 +26,9 @@
     font-weight: 400;
     padding-top: 0.6em;
     padding-bottom: 0.6em;
-    background-color: var(--color-purple);
-    color: var(--bg-body);
-    font-weight: 500;
+    background-color: var(--bg-card);
+    color: var(--color-purple);
+    font-weight: bold;
     border-radius: 10px 30px;
     margin: auto;
     margin-top: 2em;
@@ -36,7 +36,7 @@
 }
 
 .formuser__btn-open:hover {
-    box-shadow: -15px -5px 20px -10px  rgba(39, 5, 39, 0.685);
+    box-shadow: -15px -5px 20px -10px   rgba(96, 119, 156, 0.664);
   filter: brightness(1.2);
 }
 
@@ -54,10 +54,8 @@
 /* LOADING */
 
 
-  
-  /*body {
-    background-image: radial-gradient(circle farthest-corner at center, #3C4B57 0%, #1C262B 100%);
-  }*/
+
+
 
   .loader__users {
     width: 100%;

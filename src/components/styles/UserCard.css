@@ -7,13 +7,13 @@
     overflow: hidden;
     margin-top: 3em;
     text-align: center;
-    box-shadow: -15px -5px 20px -10px  rgba(39, 5, 39, 0.685);
+    box-shadow: -15px -5px 20px -10px   rgba(96, 119, 156, 0.664);
 }
 
 .usercard__name {
     text-align: center;
     margin-top: 1em;
-    color: var(--header-color);
+    color: var(--color-purple);
 
 }
 
@@ -56,13 +56,16 @@
     margin-bottom: 1em;
 }
 
+.bxs-trash, .bx-edit{
+    color: var(--color-purple);
+}
 .bxs-trash:hover {
-    color: #efe1d18f;
+    color: #467fc5;
     
 }
 
 .bx-edit:hover {
-    color: #efe1d18f;
+    color: #467fc5;
 }
 
 

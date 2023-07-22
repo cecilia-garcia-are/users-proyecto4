@@ -16,7 +16,7 @@ const handleOpenCard = () => {
     <div onClick={e => e.stopPropagation()} className='cardmodal__group'>
     <div onClick={handleOpenCard} className="cardmodal__close">x</div>
      <h2 className="cardmodal__tittle">New user</h2>
-     <h3 className='cardmodal__text'>{`You have added ${addUserName} to con exito`}</h3>
+     <h3 className='cardmodal__text'>{`You have added ${addUserName} with success`}</h3>
      
      
      <button onClick={handleOpenCard} className='cardmodal__btn'>Accept</button>

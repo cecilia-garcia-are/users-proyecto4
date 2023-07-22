@@ -6,6 +6,7 @@ import useFetch from './hooks/useFetch'
 import { useEffect, useState } from 'react'
 import AddModal from './components/AddModal'
 import UpdateModal from './components/UpdateModal'
+import IsDarkMode from './components/IsDarkMode'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
 
   const [deleteUserName, setDeleteUserName] = useState()
 
+  const [darkMode, setDarkMode] = IsDarkMode() //llamada de mi componente
 
   const baseUrl = 'https://users-crud.academlo.tech'
   
@@ -42,21 +44,30 @@ function App() {
     getAllUsers('/users')
     
   }, [])
+
+
+//DARK MODE
+  const handleToggleDarkMode = () => {
+    setDarkMode((prevDarkMode) => !prevDarkMode)
+  }
   
+  //ELIMINAR USER MODAL
   const showDeleteMessage = (userName) => {
     setDeleteUserName(userName)
   
   }
 
+  //ACTUALIZAR USER MODAL
   const showUpdateMessage = (userName) => {
     setUpdateUserName(userName)
   }
 
+  //ADDUSER MODAL
  const showAddMessage = (userName) => {
   setAddUserName(userName)
  }
 
-
+//MODAL FOMRULARIO 
   const handleOpenForm = () => {
     setCloseForm(false)
   }
@@ -66,6 +77,7 @@ function App() {
 
   return (
     <div>
+
       {isLoading 
       ? 
       (
@@ -83,7 +95,18 @@ function App() {
         <div>
       <header className='header'></header>
       <h1 className='user__tittle'>Users</h1>
+      {/** btn dark */}
+      <div className='group__dark'>
+      <input className='switch' type="checkbox" 
+      id="switch"
+      defaultChecked={!darkMode} 
+      onChange={handleToggleDarkMode}
+      />
+      <label className='mov' for="switch">Toggle</label>
+      </div>
+
       <button onClick={handleOpenForm} className='formuser__btn-open'>CREATE NEW USER</button>
+
       <FormUser
       createNewUser={createNewUser}
       updateInfo={updateInfo}

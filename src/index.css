@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
 
 :root {
-  --header-color: #331D2C;
-    --bg-body: #EFE1D1;
-    --bg-card:#A78295;
-    --color-purple: #3F2E3E;
+  --header-color: #60779c;
+    --bg-body: #e9f6ff;
+    --bg-card:#a3bddc;
+    --color-purple: #274369;
     font-family: 'Manrope', sans-serif;
 
 }
@@ -36,3 +36,90 @@
     border: none;
     background-color: transparent;
   }
+
+  /*DARK MODE*/
+
+  body.dark-mode {
+    background-color: #000039;
+
+    .loader__users {
+      background-color: #000039;
+    
+    }
+
+    .header {
+      background-color: #131c5a;
+  }
+
+  .formuser__btn-open {
+    background-color: #1c296b;
+    color: #c5d0fa;
+    
+  }
+
+  .user__tittle {
+    color: #c5d0fa;
+  }
+    
+    .formuser{
+      background-color: #1c296b;
+      color: #c5d0fa;
+      
+    }
+
+    .formuser-container{
+      background-color: rgba(37, 56, 123, 0.514);
+    }
+
+    .formuser__input {
+      background-color: #131c5a;
+      color: #c5d0fa;
+    }
+
+    .formuser__btn {
+      background-color: #000039;
+      color: #c5d0fa;
+  }
+
+  .usercard__container {
+    background-color: #1c296b;
+    color: #c5d0fa;
+  
+  }
+
+  .usercard__name {
+    color: #8ea0e9;
+  }
+
+  .bxs-trash, .bx-edit{
+    color: #000039;
+}
+
+.bxs-trash:hover, .bx-edit:hover {
+  color: #31619b;
+  
+}
+
+.cardmodal-container {
+  
+  background-color: rgba(37, 56, 123, 0.514);
+}
+
+.cardmodal__group {
+  background-color: #1c296b;
+  color: #c5d0fa;
+}
+
+.cardmodal__tittle, .cardmodal__text {
+  color: #c5d0fa;
+}
+
+
+.cardmodal__btn {
+  background: #000039;
+  color: #c5d0fa;
+  
+}
+
+
+}
